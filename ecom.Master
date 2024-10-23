@@ -1,0 +1,351 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ecom.master.cs" Inherits="tediev2.ecom" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tuime - Animal Food Website Template" />
+    <meta name="keywords" content="accessories, digital products, electronic html, modern, products, responsive" />
+    <meta name="author" content="hastech" />
+
+    <title>Tedie - Simples assim!</title>
+
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+    <!--== Google Fonts ==-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!--== Bootstrap CSS ==-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!--== Font Awesome Min Icon CSS ==-->
+    <%--    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />--%>
+    <!--== 7 Stroke Icon CSS ==-->
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <!--== Swiper CSS ==-->
+    <link href="assets/css/swiper.min.css" rel="stylesheet" />
+    <!--== Fancybox Min CSS ==-->
+    <link href="assets/css/fancybox.min.css" rel="stylesheet" />
+    <!--== Range Slider Min CSS ==-->
+    <link href="assets/css/ion.rangeSlider.min.css" rel="stylesheet" />
+
+    <!--== Main Style CSS ==-->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <!--== Font Awesome ==-->
+    <%--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMu8hH9uJX3IBS0K4B4cuS6UnH0sDZk75yV5Mc" crossorigin="anonymous">--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!--wrapper start-->
+        <div class="wrapper">
+            <!--== Start Preloader Content ==-->
+            <div class="preloader-wrap">
+                <div class="preloader">
+                    <div class="dog-head"></div>
+                    <div class="dog-body"></div>
+                </div>
+            </div>
+            <!--== End Preloader Content ==-->
+            <header class="header-area header-default">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <div class="header-align d-flex justify-content-between align-items-center">
+                                <div class="header-logo-area">
+                                    <a href="index.aspx">
+                                        <img class="logo-main" src="assets/img/LogoTedie.png" alt="Logo" />
+                                    </a>
+                                </div>
+                                <nav class="header-navigation-area">
+                                    <ul class="nav-list d-flex">
+                                        <li><a href="shop.aspx" class="nav-link">Loja</a></li>
+                                        <li><a href="about.aspx" class="nav-link">Sobre Nós</a></li>
+                                        <li><a href="contact.aspx" class="nav-link">Contato</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="header-action-area d-flex align-items-center">
+                                    <div class="shopping-account">
+                                        <a class="shopping-account-btn" href="login.aspx" aria-label="Login">
+                                            <!-- Ícone de Conta Personalizado -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                                <path d="M12 12c2.5 0 4.5-2 4.5-4.5S14.5 3 12 3 7.5 5 7.5 7.5 9.5 12 12 12zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="shopping-cart">
+                                        <button class="shopping-cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasCart" aria-controls="AsideOffcanvasCart" aria-label="Carrinho">
+                                            <!-- Novo Ícone de Carrinho Moderno -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                <path d="M6 2h15l-1.68 9H6M6 2l1.5 3h9.5M6 2l-3 6h0m0 0h15m-15 0l1 10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2l-1-10M6 19h0m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                                            </svg>
+                                            <sup class="shop-count">
+                                                <asp:Label ID="lblQtdeCarrinho" runat="server" Text="0"></asp:Label>
+                                            </sup>
+                                        </button>
+                                    </div>
+                                    <button class="btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasMenu" aria-controls="AsideOffcanvasMenu" aria-label="Menu">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                            <path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+
+            <!--== Start Header Wrapper ==-->
+
+
+            <main class="main-content">
+                <div>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </main>
+
+            <!--== Start Footer Area Wrapper ==-->
+            <footer class="footer-area">
+
+                <!--== Start Footer Bottom ==-->
+                <div class="footer-bottom">
+                    <div class="container pt--0 pb--0">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="footer-bottom-content">
+                                    <p class="copyright">© 2024 Tedie. Simples assim! <i class="fa fa-heart"></i>Grupo <a target="_blank" href="https://w7startup.com.br">W7.</a></p>
+                                    <div class="payment">
+                                        <img src="assets/img/LogoTedie.png" alt="Payment Logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--== End Footer Bottom ==-->
+            </footer>
+            <!--== End Footer Area Wrapper ==-->
+
+            <!--== Scroll Top Button ==-->
+            <div id="scroll-to-top" class="scroll-to-top"><span class="fa fa-angle-up"></span></div>
+
+            <!--== Start Aside Cart ==-->
+            <aside class="aside-cart-wrapper offcanvas offcanvas-end" tabindex="-1" id="AsideOffcanvasCart" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h1 class="d-none" id="offcanvasRightLabel">Seu carrinho favorito</h1>
+                    <button class="btn-aside-cart-close" data-bs-dismiss="offcanvas" aria-label="Close">Seu carrinho perfeito <i class="fa fa-chevron-right"></i></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="aside-cart-product-list">
+                        <asp:ListView ID="ltvCarrinho" runat="server" DataSourceID="sdsCarrinho">
+                            <ItemTemplate>
+                                <tr class="tbody-item">
+                                    <td class="product-remove">
+                                        <a class="remove" href="javascript:void(0)">×</a>
+                                    </td>
+                                    <td class="product-thumbnail">
+                                        <div class="thumb">
+                                            <a href="single-product.html">
+                                                <img src='<%#Eval("imagem") %>' width="75" height="75" alt="Image-HasTech">
+                                            </a>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                        </div>
+                                    </td>
+                                    <td class="product-name">
+                                        <a class="title" href="produtodetalhes.aspx?id=<%# Eval("idproduto") %>"><%# Eval("nome_abrev") %></a>
+                                    </td>
+                                    <td class="product-price">
+                                        <span class="price" onkeyup="formataValor(this,event);">R$ <%#Eval("valor_unit") %></span>
+                                    </td>
+                                    <td class="product-quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" class="quantity" title="Quantity" value='<%#Eval("qtde") %>'>
+                                        </div>
+                                    </td>
+                                    <td class="product-subtotal">
+                                        <span class="price" onkeyup="formataValor(this,event);">R$ <%#Eval("valor") %></span>
+                                    </td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:ListView>
+                        <asp:SqlDataSource ID="sdsCarrinho" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="select pe.numero_pedido, i.idproduto, p.nome_abrev, p.imagem, qtde, i.valor, valor_unit from app_pedido pe
+join  app_pedido_item i on i.numero_pedido = pe.numero_pedido
+       join app_produto p on p.idproduto = i.idproduto
+       where pe.sessao  = @sessao
+       ">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="sessao" SessionField="cookie" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                    </ul>
+                    <p class="cart-total">
+                        <span>Subtotal:<span class="amount">R$
+                        <asp:Label ID="lblSubTotalCarrinho" runat="server" Text="0,00"></asp:Label></span>
+                    </p>
+                    <a class="btn-total" href="carrinho.aspx">Ver carrinho</a>
+                    <a class="btn-total" href="checkout.aspx">Checkout</a>
+                </div>
+            </aside>
+            <!--== End Aside Cart ==-->
+        </div>
+        <!--=======================Javascript============================-->
+
+         <!--== Start Aside Search Form ==-->
+ <aside class="aside-search-box-wrapper offcanvas offcanvas-top" tabindex="-1" id="AsideOffcanvasSearch" aria-labelledby="offcanvasTopLabel">
+     <div class="offcanvas-header">
+         <h5 class="d-none" id="offcanvasTopLabel">Aside Search</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="pe-7s-close"></i></button>
+     </div>
+     <div class="offcanvas-body">
+         <div class="container pt--0 pb--0">
+             <div class="search-box-form-wrap">
+                 <div class="search-note">
+                     <p>Start typing and press Enter to search</p>
+                 </div>
+                     <div class="search-form position-relative">
+                         <label for="search-input" class="visually-hidden">Search</label>
+                         <input id="search-input" type="search" class="form-control" placeholder="Search entire store…">
+                         <button class="search-button"><i class="fa fa-search"></i></button>
+                     </div>
+             </div>
+         </div>
+     </div>
+ </aside>
+ <!--== End Aside Search Form ==-->
+
+ <!--== Start Aside Menu ==-->
+ <aside class="off-canvas-wrapper offcanvas offcanvas-start" tabindex="-1" id="AsideOffcanvasMenu" aria-labelledby="offcanvasExampleLabel">
+     <div class="offcanvas-header">
+         <h1 class="d-none" id="offcanvasExampleLabel">Aside Menu</h1>
+         <button class="btn-menu-close" data-bs-dismiss="offcanvas" aria-label="Close">menu <i class="fa fa-chevron-left"></i></button>
+     </div>
+     <div class="offcanvas-body">
+         <nav id="offcanvasNav" class="offcanvas-menu-nav">
+             <ul>
+                 <li class="offcanvas-nav-parent">
+                     <a class="offcanvas-nav-item" href="javascript:void(0)">Home</a>
+                     <ul>
+                         <li><a href="index.html"><span>Home One</span></a></li>
+                         <li><a href="index-two.html"><span>Home Two</span></a></li>
+                     </ul>
+                 </li>
+
+                 <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="about-us.html">About</a></li>
+
+                 <li class="offcanvas-nav-parent">
+                     <a class="offcanvas-nav-item" href="javascript:void(0)">Shop</a>
+                     <ul>
+                         <li>
+                             <a class="offcanvas-nav-item" href="javascript:void(0)">Shop Layouts</a>
+                             <ul>
+                                 <li><a href="shop-three-columns.html"><span>Shop 3 Column</span></a></li>
+                                 <li><a href="shop-four-columns.html"><span>Shop 4 Column</span></a></li>
+                                 <li><a href="shop-left-sidebar.html"><span>Shop Left Sidebar</span></a></li>
+                                 <li><a href="shop.html"><span>Shop Right Sidebar</span></a></li>
+                             </ul>
+                         </li>
+                         <li>
+                             <a class="offcanvas-nav-item" href="javascript:void(0)">Single Product</a>
+                             <ul>
+                                 <li><a href="single-normal-product.html"><span>Single Product Normal</span></a></li>
+                                 <li><a href="single-product.html"><span>Single Product Variable</span></a></li>
+                                 <li><a href="single-group-product.html"><span>Single Product Group</span></a></li>
+                                 <li><a href="single-affiliate-product.html"><span>Single Product Affiliate</span></a></li>
+                             </ul>
+                         </li>
+                         <li>
+                             <a class="offcanvas-nav-item" href="javascript:void(0)">Others Pages</a>
+                             <ul>
+                                 <li><a href="shop-cart.html"><span>Shopping Cart</span></a></li>
+                                 <li><a href="shop-checkout.html"><span>Checkout</span></a></li>
+                                 <li><a href="shop-wishlist.html"><span>Wishlist</span></a></li>
+                                 <li><a href="shop-compare.html"><span>Compare</span></a></li>
+                             </ul>
+                         </li>
+                     </ul>
+                 </li>
+
+                 <li class="offcanvas-nav-parent">
+                     <a class="offcanvas-nav-item" href="javascript:void(0)">Blog</a>
+                     <ul>
+                         <li>
+                             <a class="offcanvas-nav-item" href="javascript:void(0)">Blog Layout</a>
+                             <ul>
+                                 <li><a href="blog-grid.html">Blog Grid</a></li>
+                                 <li><a href="blog.html">Blog Left Sidebar</a></li>
+                                 <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                             </ul>
+                         </li>
+                         <li>
+                             <a class="offcanvas-nav-item" href="javascript:void(0)">Single Blog</a>
+                             <ul>
+                                 <li><a href="blog-details-no-sidebar.html">Blog Details</a></li>
+                                 <li><a href="blog-details.html">Blog Details Left Sidebar</a></li>
+                                 <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
+                             </ul>
+                         </li>
+                     </ul>
+                 </li>
+
+                 <li class="offcanvas-nav-parent">
+                     <a class="offcanvas-nav-item" href="javascript:void(0)">Pages</a>
+                     <ul>
+                         <li><a href="account.html"><span>Account</span></a></li>
+                         <li><a href="account-login.html"><span>Login</span></a></li>
+                         <li><a href="account-register.html"><span>Register</span></a></li>
+                         <li><a href="page-not-found.html"><span>Page Not Found</span></a></li>
+                     </ul>
+                 </li>
+
+                 <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="contact.html">Contact</a></li>
+             </ul>
+         </nav>
+     </div>
+ </aside>
+ <!--== End Aside Menu ==-->
+
+        <!--=== jQuery Modernizr Min Js ===-->
+        <script src="assets/js/modernizr.js"></script>
+        <!--=== jQuery Min Js ===-->
+        <script src="assets/js/jquery-main.js"></script>
+        <!--=== jQuery Migration Min Js ===-->
+        <script src="assets/js/jquery-migrate.js"></script>
+        <!--=== jQuery Popper Min Js ===-->
+        <script src="assets/js/popper.min.js"></script>
+        <!--=== jQuery Bootstrap Min Js ===-->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!--=== jQuery Swiper Min Js ===-->
+        <script src="assets/js/swiper.min.js"></script>
+        <!--=== jQuery Fancybox Min Js ===-->
+        <script src="assets/js/fancybox.min.js"></script>
+        <!--=== jQuery Countdown Min Js ===-->
+        <script src="assets/js/countdown.js"></script>
+        <!--=== jQuery Isotope Min Js ===-->
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <!--=== jQuery Range Slider Min Js ===-->
+        <script src="assets/js/ion.rangeSlider.min.js"></script>
+        <!--=== Carousel Js ===-->
+        <script src="assets/js/Carousel.js"></script>
+        <!--=== jQuery Custom Js ===-->
+        <script src="assets/js/custom.js"></script>
+
+
+
+    </form>
+</body>
+</html>
